@@ -1,6 +1,6 @@
-import './eventLog.js'
+import EventLog from '../eventLog';
 
-class Buttons extends HTMLElement {
+class ButtonsComponent extends HTMLElement {
     constructor() {
         super();
 
@@ -35,4 +35,4 @@ class Buttons extends HTMLElement {
     }
 }
 
-customElements.define('counter-buttons', Buttons);
+customElements.define('counter-buttons', ButtonsComponent);

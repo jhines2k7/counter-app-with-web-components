@@ -1,15 +1,20 @@
-import './buttons.js';
-import './counter.js';
-import './eventLog.js';
+import './web-components/buttons-component';
+import './web-components/counter-component';
+import EventLog from './eventLog';
+import Storage from './storage'
+
+let eventLog;
 
 window.addEventListener('load', () => {
-    this.eventLog = new EventLog();
+    Storage.get().then( (events) => {
+        this.eventLog = new EventLog(events);
+    });
 
     const main = document.querySelector('main');
 
-    const counter = document.createElement('counter-component');
-    counter.count = 1;
+    const counterComponent = document.createElement('counter-component');
+    counterComponent.count = 1;
 
-    main.appendChild(counter);
+    main.appendChild(counterComponent);
     main.appendChild(document.createElement('counter-buttons'));
 });
