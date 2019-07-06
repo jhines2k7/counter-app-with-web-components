@@ -1,7 +1,10 @@
 import './buttons.js';
 import './counter.js';
+import './eventLog.js';
 
 window.addEventListener('load', () => {
+    this.eventLog = new EventLog();
+
     const main = document.querySelector('main');
 
     const counter = document.createElement('counter-component');

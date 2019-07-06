@@ -2,9 +2,9 @@
   "name": "counter-app-with-web-components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/jhines2k7/counter-app-with-web-components#readme",
   "dependencies": {
-    "browserify": "^16.3.0",
     "localforage": "^1.7.3",
-    "postal": "^2.0.5",
-    "watchify": "^3.11.1"
+    "postal": "^2.0.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }
