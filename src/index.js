@@ -7,13 +7,13 @@ let eventLog;
 
 window.addEventListener('load', () => {
     Storage.get().then( (events) => {
-        this.eventLog = new EventLog(events);
+        eventLog = new EventLog(events);
     });
 
     const main = document.querySelector('main');
 
     const counterComponent = document.createElement('counter-component');
-    counterComponent.count = 1;
+    counterComponent.count = 0;
 
     main.appendChild(counterComponent);
     main.appendChild(document.createElement('counter-buttons'));

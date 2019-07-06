@@ -11,6 +11,8 @@ export default class EventLog {
 
         if(events) {
             this.events = events;
+        } else {
+            this.events = [];
         }
 
         return instance;

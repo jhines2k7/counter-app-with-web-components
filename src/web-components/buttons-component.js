@@ -23,13 +23,15 @@ class ButtonsComponent extends HTMLElement {
     }
 
     onIncreaseButtonClick(event) {
-        this.eventLog.add(eventLog.events, [{
+        this.eventLog.add(this.eventLog.events, [{
+            channel: 'app-msg-bus',
             topic: 'app.increment.count'
         }]);
     }
 
     onDecreaseButtonClick(event) {
-        this.eventLog.add(eventLog.events, [{
+        this.eventLog.add(this.eventLog.events, [{
+            channel: 'app-msg-bus',
             topic: 'app.decrement.count'
         }]);
     }
